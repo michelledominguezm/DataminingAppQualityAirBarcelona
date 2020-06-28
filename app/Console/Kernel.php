@@ -34,7 +34,6 @@ class Kernel extends ConsoleKernel
         $schedule->command('dependencies:refresh')->weeklyOn(6, '18:00')->appendOutputTo('/home/vagrant/ProjectApp/DataminingApp/dependencies.txt');
         $schedule->command('transit:refresh')->everyTenMinutes()->appendOutputTo('/home/vagrant/ProjectApp/DataminingApp/transit.txt');
         $schedule->command('congestions:refresh')->cron('0 */2 * * *')->appendOutputTo('/home/vagrant/ProjectApp/DataminingApp/congestions.txt');
-        //$schedule->command('congestions:refresh')->hourlyAt(21)->appendOutputTo('/home/vagrant/ProjectApp/DataminingApp/congestions.txt');
         $schedule->command('resultats:refresh')->everyThirtyMinutes()->appendOutputTo('/home/vagrant/ProjectApp/DataminingApp/resultats.txt');
     }
 }
