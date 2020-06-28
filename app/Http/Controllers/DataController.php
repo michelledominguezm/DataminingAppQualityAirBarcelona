@@ -367,13 +367,9 @@ class DataController extends Controller
         if($hora==24){
             $hora=0;
         }
-        //dd($hora); congestio_id": n
-        //$current = '?hora='.($hora).'&dia='.($dia).'&mes='.$mes.'&any='.$any;
-        //$current = '?dia='.(14).'&mes='.(1).'&any='.$any; 
-        $current = '?dia='.(27).'&mes='.(6).'&any='.$any;
-        if(!$isCron){
-            $current = '?dia='.(21).'&mes='.(2).'&any='.$any; //retroceder - falta 14 / 3   (y 6/6!!!!!)
-        }
+        
+        $current = '?hora='.($hora).'&dia='.($dia).'&mes='.$mes.'&any='.$any;
+        
         $tram_count = 0;
         foreach($trams as $tram){
 
